@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "565318358877",
+    "firebase_url": "https://safwatfood-9dfa0-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "safwatfood-9dfa0",
+    "storage_bucket": "safwatfood-9dfa0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565318358877:android:1d4c0efaaccc7c817ffab4",
+        "android_client_info": {
+          "package_name": "cat.copernic.safwatfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565318358877-sdeprfub5hug111argpjdaa7c4cv6phj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg5jtl0kn8dXzuVaWT6rVwdtuMWOVhwWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565318358877-sdeprfub5hug111argpjdaa7c4cv6phj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

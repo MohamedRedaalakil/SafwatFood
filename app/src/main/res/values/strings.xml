@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">SafwatFood</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="usuari">Usuari</string>
+    <string name="password">password</string>
+    <string name="no_tens_compte_registra_t_aqu">No tens compte? Registra\'t aquí.</string>
+    <string name="login">Login</string>
+    <string name="registra_t">Registrat</string>
+    <string name="nom">Nom</string>
+    <string name="cognom">Cognom</string>
+    <string name="contraseya">password</string>
+    <string name="e_mail">E-mail</string>
+    <string name="tancar_sessi">Tancar sessió</string>
+
+</resources>
