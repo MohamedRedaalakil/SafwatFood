@@ -32,17 +32,6 @@ class ProfileActivity : AppCompatActivity() {
 
         emailText.text = "Email  -- > "+user?.email
 
-        userreference?.addValueEventListener(object: ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-
-                firstnameText.text = "Nom - - > "+snapshot.child("firstname").value.toString()
-                lastnameText.text = "Cognom - -> "+snapshot.child("lastname").value.toString()
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-        })
 
 
         logoutButton.setOnClickListener {
