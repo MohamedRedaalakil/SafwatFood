@@ -58,6 +58,7 @@ class RegistrationActivity : AppCompatActivity() {
 
                     } else {
                         Toast.makeText(this@RegistrationActivity, "Registre fallit , intenta-ho de nou! ", Toast.LENGTH_LONG).show()
+
                     }
                 }
         }

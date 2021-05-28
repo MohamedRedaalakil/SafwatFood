@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class ProfileActivity : AppCompatActivity() {
 
     lateinit var auth: FirebaseAuth
+
     var databaseReference :  DatabaseReference? = null
     var database: FirebaseDatabase? = null
 
