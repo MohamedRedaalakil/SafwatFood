@@ -31,7 +31,7 @@ class ProfileActivity : AppCompatActivity() {
         val user = auth.currentUser
         val userreference = databaseReference?.child(user?.uid!!)
 
-        emailText.text = "Email  -- > "+user?.email
+        emailText.text = "Usuari  -- > "+user?.email
 
 
 
