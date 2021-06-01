@@ -1,9 +1,13 @@
 package cat.copernic.safwatfood
 
 import android.os.Bundle
+import android.widget.GridLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import cat.copernic.safwatfood.adapter.MyProducteAdapter
 import cat.copernic.safwatfood.listener.IProducteLoadListener
 import cat.copernic.safwatfood.model.ProducteModel
+import cat.copernic.safwatfood.utils.SpaceItemDecoration
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -22,7 +26,6 @@ class MainList: AppCompatActivity(), IProducteLoadListener {
         setContentView(R.layout.activity_main_list)
 
         init()
-
         loadProducteFromFirebase()
 
     }
@@ -55,14 +58,18 @@ class MainList: AppCompatActivity(), IProducteLoadListener {
 
     private fun init(){
         producteLoadListener = this
+        val gridLayoutManager = GridLayoutManager(this,2)
+        recycler_productes.layoutManager = gridLayoutManager
+        recycler_productes.addItemDecoration(SpaceItemDecoration())
     }
-
+    //Datos de producte carregat satisfactòriament !
     override fun onProducteLoadSuccess(producteModelList: List<ProducteModel>?) {
-
+        val adapter = MyProducteAdapter(this, producteModelList!!)
+        recycler_productes.adapter = adapter
     }
 
     override fun onProducteLoadFailed(message: String?) {
-        Snackbar.make(listLayout,message,Snackbar.LENGTH_LONG).show()
+        Snackbar.make(listLayout,message!!,Snackbar.LENGTH_LONG).show()
     }
 
 }

@@ -20,6 +20,11 @@ class ProfileActivity : AppCompatActivity() {
         database = FirebaseDatabase.getInstance()
         databaseReference = database?.reference!!.child("Usuari")
         loadProfile()
+
+        imageButton.setOnClickListener {
+            val intent = Intent(this,MainList::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun loadProfile() {
