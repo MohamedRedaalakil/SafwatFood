@@ -8,12 +8,9 @@ import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class ProfileActivity : AppCompatActivity() {
-
     lateinit var auth: FirebaseAuth
-
     var databaseReference :  DatabaseReference? = null
     var database: FirebaseDatabase? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,19 +19,13 @@ class ProfileActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
         databaseReference = database?.reference!!.child("Usuari")
-
         loadProfile()
     }
 
     private fun loadProfile() {
-
         val user = auth.currentUser
         val userreference = databaseReference?.child(user?.uid!!)
-
         emailText.text = "Usuari  -- > "+user?.email
-
-
-
         logoutButton.setOnClickListener {
             auth.signOut()
             startActivity(Intent(this@ProfileActivity, LoginActivity::class.java))
