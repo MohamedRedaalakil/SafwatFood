@@ -1,5 +1,6 @@
 package cat.copernic.safwatfood
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.EventLog
 import android.widget.GridLayout
@@ -17,7 +18,9 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.activity_cart.*
 import kotlinx.android.synthetic.main.activity_main_list.*
+import kotlinx.android.synthetic.main.activity_main_list.listLayout
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -72,11 +75,11 @@ class MainList: AppCompatActivity(), IProducteLoadListener, ICartLoadListener {
                             cartModels.add(cartModel)
 
                         }
-                        cartLoadListener.onLoadCartSuccess(cartModels)
+                        cartLoadListener!!.onLoadCartSuccess(cartModels)
                     }
 
                     override fun onCancelled(error: DatabaseError) {
-                        cartLoadListener.onLoadCartFailed(error.message)
+                        cartLoadListener!!.onLoadCartFailed(error.message)
                     }
 
                 })
@@ -115,6 +118,9 @@ class MainList: AppCompatActivity(), IProducteLoadListener, ICartLoadListener {
         val gridLayoutManager = GridLayoutManager(this,2)
         recycler_productes.layoutManager = gridLayoutManager
         recycler_productes.addItemDecoration(SpaceItemDecoration())
+
+        btnCart.setOnClickListener {  startActivity(Intent(this,CartActivity::class.java))}
+        btnBack2.setOnClickListener { finish() }
     }
     //Datos de producte carregat satisfactòriament !
     override fun onProducteLoadSuccess(producteModelList: List<ProducteModel>?) {

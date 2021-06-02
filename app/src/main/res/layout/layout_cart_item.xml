@@ -90,7 +90,7 @@
 
 
            <ImageView
-               android:id="@+id/brnDelete"
+               android:id="@+id/btnDelete"
                android:src="@drawable/ic_baseline_clear_24"
                android:layout_weight="1"
                android:layout_width="0dp"
