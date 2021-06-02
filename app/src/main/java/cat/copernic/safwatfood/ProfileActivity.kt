@@ -27,6 +27,7 @@ class ProfileActivity : AppCompatActivity() {
         }
     }
 
+    //Mostrar el nombre del usuari
     private fun loadProfile() {
         val user = auth.currentUser
         val userreference = databaseReference?.child(user?.uid!!)
