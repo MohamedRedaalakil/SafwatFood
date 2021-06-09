@@ -12,9 +12,11 @@ import cat.copernic.safwatfood.R
 import cat.copernic.safwatfood.eventos.UpdateCartEvent
 import cat.copernic.safwatfood.model.CartModel
 import com.bumptech.glide.Glide
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.layout_cart_item.view.*
 import org.greenrobot.eventbus.EventBus
+
 
 class MyCartAdapter(
     private val context: Context,
@@ -68,6 +70,9 @@ class MyCartAdapter(
         holder.btnPlus!!.setOnClickListener { _ -> plusCartItem(holder, cartModelList[position]) }
         holder.btnDelete!!.setOnClickListener { _ ->
             //Habilitar el boton de borrar en el firebase
+
+            val uid = FirebaseAuth.getInstance().currentUser!!.uid
+
             val dialog = AlertDialog.Builder(context)
                 .setTitle("Vols eliminar aquest producte?")
                 .setMessage("Segur d'esborrar aquest producte?")
@@ -77,7 +82,7 @@ class MyCartAdapter(
                     notifyItemRemoved(position)
                     FirebaseDatabase.getInstance()
                         .getReference("Cart")
-                        .child("Usuari")
+                        .child(uid!!)
                         .child(cartModelList[position].key!!)
                         .removeValue()
                         .addOnSuccessListener {
@@ -110,9 +115,10 @@ class MyCartAdapter(
 
     // Funcion para actualizar datos en el Firebase
     private fun updateFirebase(cartModel: CartModel) {
+        val uid = FirebaseAuth.getInstance().currentUser!!.uid
         FirebaseDatabase.getInstance()
             .getReference("Cart")
-            .child("Usuari")
+            .child(uid!!)
             .child(cartModel.key!!)
             .setValue(cartModel)
             .addOnSuccessListener { EventBus.getDefault().postSticky(UpdateCartEvent()) }

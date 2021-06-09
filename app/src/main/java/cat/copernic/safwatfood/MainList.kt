@@ -14,11 +14,13 @@ import cat.copernic.safwatfood.model.CartModel
 import cat.copernic.safwatfood.model.ProducteModel
 import cat.copernic.safwatfood.utils.SpaceItemDecoration
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_cart.*
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main_list.*
 import kotlinx.android.synthetic.main.activity_main_list.listLayout
 import org.greenrobot.eventbus.EventBus
@@ -55,17 +57,33 @@ class MainList: AppCompatActivity(), IProducteLoadListener, ICartLoadListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_list)
 
+        homeBtn2.setOnClickListener {
+            val intent = Intent(this,ProfileActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        addBtn2.setOnClickListener {
+            val intent = Intent(this,CartActivity::class.java)
+            startActivity(intent)
+        }
+
         init()
         loadProducteFromFirebase()
         countCartFromFirebase()
 
+
+
+
+
     }
     // Funcion para contar la cesta en el firebase
     private fun countCartFromFirebase() {
+        val uid = FirebaseAuth.getInstance().currentUser!!.uid
         val cartModels : MutableList<CartModel> = ArrayList()
         FirebaseDatabase.getInstance()
                 .getReference("Cart")
-                .child("Usuari")
+                .child(uid!!)
                 .addListenerForSingleValueEvent(object:ValueEventListener{
                     override fun onDataChange(snapshot: DataSnapshot) {
                         for (cartSnapshot in snapshot.children){

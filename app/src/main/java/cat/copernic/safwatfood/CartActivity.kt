@@ -1,5 +1,6 @@
 package cat.copernic.safwatfood
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
@@ -10,12 +11,14 @@ import cat.copernic.safwatfood.eventos.UpdateCartEvent
 import cat.copernic.safwatfood.listener.ICartLoadListener
 import cat.copernic.safwatfood.model.CartModel
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_cart.*
 import kotlinx.android.synthetic.main.activity_cart.listLayout
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main_list.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
@@ -48,13 +51,31 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
         init()
         loadCartFromFirebase()
 
+        homeBtn3.setOnClickListener {
+            val intent = Intent(this,ProfileActivity::class.java)
+            startActivity(intent)
+        }
+
+        searchBtn3.setOnClickListener {
+            val intent = Intent(this,MainList::class.java)
+            startActivity(intent)
+        }
+
+        btnChekout.setOnClickListener {
+            val intent = Intent(this,ChekoutActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
     }
 
     private fun loadCartFromFirebase() {
+        val uid = FirebaseAuth.getInstance().currentUser!!.uid
         val cartModels : MutableList<CartModel> = ArrayList()
         FirebaseDatabase.getInstance()
             .getReference("Cart")
-            .child("Usuari")
+            .child(uid!!)
             .addListenerForSingleValueEvent(object: ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     for (cartSnapshot in snapshot.children){

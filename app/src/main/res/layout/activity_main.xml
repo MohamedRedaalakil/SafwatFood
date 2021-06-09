@@ -8,7 +8,7 @@
     tools:context=".ProfileActivity">
 
     <LinearLayout
-        android:background="#36BA3C"
+        android:background="#388E3C"
         android:id="@+id/panel"
         android:weightSum="16"
         android:layout_width="match_parent"
@@ -16,58 +16,49 @@
         android:orientation="horizontal"
        >
 
-        <ImageView
-            android:src="@android:drawable/dark_header"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start|center_vertical"
-            android:layout_weight="2" />
 
         <TextView
+            android:layout_width="380dp"
+            android:layout_height="48dp"
             android:layout_gravity="center_vertical"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_weight="11"
-            android:text="Menu inicial" />
+            android:gravity="center"
+            android:text="Perfil"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
+
 
     <TextView
         android:id="@+id/emailText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/logoutButton"
-        android:layout_below="@+id/panel"
+        android:layout_height="45dp"
+        android:layout_below="@+id/imageButton"
+        android:layout_alignBottom="@+id/logoutButton"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="356dp"
-        android:layout_marginBottom="208dp"
-        android:textColor="#000000"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="130dp"
+        android:textColor="#F4EFEF"
         android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.038"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/logoutButton"
-        android:layout_width="wrap_content"
+        android:layout_width="178dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="650dp"
-        android:layout_marginEnd="144dp"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="602dp"
+        android:layout_marginEnd="114dp"
         android:text="@string/tancar_sessi"
         android:textAllCaps="false"
         android:textStyle="bold"
@@ -80,13 +71,77 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="327dp"
-        android:layout_height="197dp"
+        android:layout_width="391dp"
+        android:layout_height="462dp"
         android:layout_below="@+id/panel"
-        android:layout_alignParentEnd="false"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="273dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="40dp"
-        app:srcCompat="@drawable/tienda" />
+        app:srcCompat="@drawable/sad" />
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bottom_bar_shape"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/homeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:padding="15dp"
+            android:src="@drawable/ic_baseline_person_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginStart="52dp"
+            android:background="@android:color/white"
+            android:padding="15dp"
+            android:src="@drawable/ic_baseline_shopping_bag_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+        <ImageButton
+            android:id="@+id/addBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:padding="15dp"
+            android:src="@drawable/ic_baseline_shopping_cart_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </LinearLayout>
+
 
 </RelativeLayout>

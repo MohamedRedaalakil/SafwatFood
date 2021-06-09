@@ -26,10 +26,7 @@ class RegistrationActivity : AppCompatActivity() {
     }
 
     private fun register() {
-
-
         registerButton.setOnClickListener {
-
                 if(TextUtils.isEmpty(firstnameInput.text.toString())) {
                     firstnameInput.setError("Escriu el nom ...")
                     return@setOnClickListener
@@ -43,8 +40,6 @@ class RegistrationActivity : AppCompatActivity() {
                     firstnameInput.setError("Escriu la contrasenya ...")
                     return@setOnClickListener
                 }
-
-
             auth.createUserWithEmailAndPassword(usernameInput.text.toString(), passwordInput.text.toString())
                 .addOnCompleteListener {
                     if(it.isSuccessful) {
@@ -58,7 +53,6 @@ class RegistrationActivity : AppCompatActivity() {
 
                     } else {
                         Toast.makeText(this@RegistrationActivity, "Registre fallit , intenta-ho de nou! ", Toast.LENGTH_LONG).show()
-
                     }
                 }
         }

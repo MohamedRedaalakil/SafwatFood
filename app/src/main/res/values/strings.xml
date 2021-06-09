@@ -12,6 +12,7 @@
     <string name="usuari">Usuari</string>
     <string name="password">password</string>
     <string name="no_tens_compte_registra_t_aqu">No tens compte? Registra\'t aquí.</string>
+    <string name="order_placed">La teva comanda s ha realitzat correctament!</string>
     <string name="login">Login</string>
     <string name="registra_t">Registrat</string>
     <string name="nom">Nom</string>

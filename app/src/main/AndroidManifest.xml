@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_icono_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CartActivity"></activity>
+        <activity android:name=".ChekoutActivity"></activity>
+        <activity android:name=".CartActivity" />
         <activity android:name=".MainList" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".ProfileActivity" />

@@ -21,17 +21,27 @@ class ProfileActivity : AppCompatActivity() {
         databaseReference = database?.reference!!.child("Usuari")
         loadProfile()
 
-        imageButton.setOnClickListener {
+
+
+        searchBtn.setOnClickListener {
             val intent = Intent(this,MainList::class.java)
             startActivity(intent)
         }
+        addBtn.setOnClickListener {
+            val intent = Intent(this,CartActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
+
     }
 
     //Mostrar el nombre del usuari
     private fun loadProfile() {
         val user = auth.currentUser
         val userreference = databaseReference?.child(user?.uid!!)
-        emailText.text = "Usuari  -- > "+user?.email
+        emailText.text = "Usuari: "+user?.email
         logoutButton.setOnClickListener {
             auth.signOut()
             startActivity(Intent(this@ProfileActivity, LoginActivity::class.java))
