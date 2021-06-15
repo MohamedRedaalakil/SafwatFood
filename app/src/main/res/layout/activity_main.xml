@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/cover"
     tools:context=".ProfileActivity">
 
     <LinearLayout
@@ -23,7 +24,7 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="11"
             android:gravity="center"
-            android:text="Perfil"
+            android:text="@string/profile"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -59,7 +60,7 @@
         android:layout_marginStart="119dp"
         android:layout_marginTop="602dp"
         android:layout_marginEnd="114dp"
-        android:text="@string/tancar_sessi"
+        android:text="@string/sign_off"
         android:textAllCaps="false"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -75,6 +76,7 @@
         android:layout_height="462dp"
         android:layout_below="@+id/panel"
         android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_logo"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="40dp"
         app:srcCompat="@drawable/sad" />
@@ -99,10 +101,11 @@
         <ImageButton
             android:id="@+id/homeBtn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_margin="5dp"
             android:background="@android:color/white"
             android:padding="15dp"
+            android:contentDescription="@string/navigation_profile_icon"
             android:src="@drawable/ic_baseline_person_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -112,11 +115,12 @@
         <ImageButton
             android:id="@+id/searchBtn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_margin="10dp"
             android:layout_marginStart="52dp"
             android:background="@android:color/white"
             android:padding="15dp"
+            android:contentDescription="@string/navigation_products_icon"
             android:src="@drawable/ic_baseline_shopping_bag_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -129,10 +133,11 @@
         <ImageButton
             android:id="@+id/addBtn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_margin="10dp"
             android:background="@android:color/white"
             android:padding="15dp"
+            android:contentDescription="@string/navigation_cart_icon"
             android:src="@drawable/ic_baseline_shopping_cart_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

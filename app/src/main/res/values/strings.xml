@@ -9,17 +9,32 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="usuari">Usuari</string>
+    <string name="user">User</string>
     <string name="password">password</string>
-    <string name="no_tens_compte_registra_t_aqu">No tens compte? Registra\'t aquí.</string>
+    <string name="dont_you_have_account">Don\'t you have an account? Register here.</string>
     <string name="order_placed">La teva comanda s ha realitzat correctament!</string>
     <string name="login">Login</string>
-    <string name="registra_t">Registrat</string>
-    <string name="nom">Nom</string>
-    <string name="cognom">Cognom</string>
-    <string name="contraseya">password</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="last_name">Last name</string>
+    <string name="password_">Password</string>
     <string name="e_mail">E-mail</string>
-    <string name="tancar_sessi">Tancar sessió</string>
+    <string name="sign_off">Sign off</string>
+    <string name="log_in">Log in</string>
+    <string name="register_">Register!</string>
+    <string name="app_logo">app logo</string>
+    <string name="navigation_profile_icon">navigation profile icon</string>
+    <string name="navigation_products_icon">navigation products icon</string>
+    <string name="navigation_cart_icon">navigation cart icon</string>
+    <string name="go_back">Go back</string>
+    <string name="shopping_cart">shopping cart</string>
+    <string name="your_product_list">your product list</string>
+    <string name="cart">Cart</string>
+    <string name="product_list">Product List</string>
+    <string name="profile">Profile</string>
+    <string name="remove_product">remove product</string>
+    <string name="reduce_product">reduce product</string>
+    <string name="add_product">add product</string>
 
 
 </resources>

@@ -54,7 +54,8 @@
                         android:src="@drawable/ic_baseline_indeterminate_check_box_24"
                         android:layout_gravity="center_vertical"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="48dp"
+                        android:contentDescription="@string/reduce_product"/>
 
                     <TextView
                         android:id="@+id/txtQuantity"
@@ -71,7 +72,8 @@
                         android:layout_gravity="center_vertical"
                         android:src="@drawable/ic_baseline_add_box_24"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="48dp"
+                        android:contentDescription="@string/add_product"/>
 
 
                 </LinearLayout>
@@ -94,7 +96,8 @@
                android:src="@drawable/ic_baseline_clear_24"
                android:layout_weight="1"
                android:layout_width="0dp"
-               android:layout_height="wrap_content" />
+               android:layout_height="48dp"
+               android:contentDescription="@string/remove_product"/>
 
     </LinearLayout>
 

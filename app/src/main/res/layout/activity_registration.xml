@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/cover"
     tools:context=".LoginActivity">
 
 
@@ -23,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="@string/registra_t"
+        android:text="@string/register_"
         android:textColor="#388E3C"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -38,8 +39,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleTv"
-        android:hint="@string/nom"
-        android:textColor="#000000"
+        android:hint="@string/name"
+        android:textColor="#1E1E1E"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
         android:layout_margin="10dp"
         />
 
@@ -49,8 +52,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstnameInput"
-        android:hint="@string/cognom"
-        android:textColor="#000000"
+        android:hint="@string/last_name"
+        android:textColor="#1E1E1E"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
         android:layout_margin="10dp"
         />
     <EditText android:id="@+id/usernameInput"
@@ -60,7 +65,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lastnameInput"
         android:hint="@string/e_mail"
-        android:textColor="#000000"
+        android:textColor="#1E1E1E"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
         android:layout_margin="10dp"
         />
 
@@ -72,7 +79,9 @@
         app:layout_constraintTop_toBottomOf="@+id/usernameInput"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:textColor="#000000"
+        android:textColor="#1E1E1E"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
         android:layout_margin="10dp"
         />
 

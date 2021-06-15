@@ -6,6 +6,7 @@
     android:id="@+id/listLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/cover"
     tools:context=".MainList">
 
     <LinearLayout
@@ -20,7 +21,8 @@
             android:id="@+id/btnBack2"
             android:src="@drawable/ic_baseline_navigate_before_24"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
+            android:contentDescription="@string/go_back"
             android:layout_gravity="start|center_vertical"
             android:layout_weight="2" />
 
@@ -32,18 +34,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="11"
-            android:text="Lista Productes" />
+            android:text="@string/product_list" />
 
         <FrameLayout
             android:id="@+id/btnCart"
             android:layout_width="0dp"
             android:layout_weight="3"
+            android:contentDescription="@string/shopping_cart"
             android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/cartButton"
             android:src="@drawable/ic_baseline_shopping_cart_24"
             android:layout_gravity="center_vertical"
+            android:contentDescription="@string/shopping_cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -91,11 +95,12 @@
         <ImageButton
             android:id="@+id/homeBtn2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_margin="5dp"
             android:background="@android:color/white"
             android:padding="15dp"
             android:src="@drawable/ic_baseline_person_24"
+            android:contentDescription="@string/navigation_profile_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -104,12 +109,13 @@
         <ImageButton
             android:id="@+id/searchBtn2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_margin="10dp"
             android:layout_marginStart="52dp"
             android:background="@android:color/white"
             android:padding="15dp"
             android:src="@drawable/ic_baseline_shopping_bag_24"
+            android:contentDescription="@string/navigation_products_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -118,11 +124,12 @@
         <ImageButton
             android:id="@+id/addBtn2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_margin="10dp"
             android:background="@android:color/white"
             android:padding="15dp"
             android:src="@drawable/ic_baseline_shopping_cart_24"
+            android:contentDescription="@string/navigation_cart_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

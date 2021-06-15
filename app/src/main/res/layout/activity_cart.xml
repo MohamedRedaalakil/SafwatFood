@@ -6,6 +6,7 @@
     android:id="@+id/listLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/cover"
     tools:context=".MainList">
 
     <LinearLayout
@@ -19,7 +20,8 @@
             android:id="@+id/btnBack"
             android:src="@drawable/ic_baseline_navigate_before_24"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
+            android:contentDescription="@string/go_back"
             android:layout_gravity="start|center_vertical"
             android:layout_weight="2" />
         <TextView
@@ -31,13 +33,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="11"
-            android:text="Cesta" />
+            android:text="@string/cart" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_cart"
         android:padding="8dp"
         android:layout_below="@+id/panel"
+        android:contentDescription="@string/your_product_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
@@ -64,11 +67,12 @@
         <ImageButton
             android:id="@+id/homeBtn3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_margin="5dp"
             android:background="@android:color/white"
             android:padding="15dp"
             android:src="@drawable/ic_baseline_person_24"
+            android:contentDescription="@string/navigation_profile_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -77,12 +81,13 @@
         <ImageButton
             android:id="@+id/searchBtn3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_margin="10dp"
             android:layout_marginStart="52dp"
             android:background="@android:color/white"
             android:padding="15dp"
             android:src="@drawable/ic_baseline_shopping_bag_24"
+            android:contentDescription="@string/navigation_products_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -91,11 +96,12 @@
         <ImageButton
             android:id="@+id/addBtn3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_margin="10dp"
             android:background="@android:color/white"
             android:padding="15dp"
             android:src="@drawable/ic_baseline_shopping_cart_24"
+            android:contentDescription="@string/navigation_cart_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
